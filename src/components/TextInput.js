@@ -1,6 +1,5 @@
 import  { React } from 'react';
 import { useState } from 'react';
-
 import '../App.css';
 
 function TextInput(props) {
@@ -8,20 +7,20 @@ function TextInput(props) {
         let text = document.getElementById("hero-field").value;
         if(!!text){
           document.getElementById("hero-field").value = text.toUpperCase();
-          props.showAlert("Success: Converted to Uppercase", "success")
+          props.newAlert("Success: Converted to Uppercase", "success")
         }
         else{
-          props.showAlert("Fail: Please enter some text first", "fail")
+          props.newAlert("Fail: Please enter some text first", "fail")
         }
     }
     const toLower = () => {
         let text = document.getElementById("hero-field").value;
         if(!!text){
           document.getElementById("hero-field").value = text.toLowerCase();
-          props.showAlert("Success: Converted to Lowercase", "success")
+          props.newAlert("Success: Converted to Lowercase", "success")
         }
         else{
-          props.showAlert("Fail: Please enter some text first", "fail")
+          props.newAlert("Fail: Please enter some text first", "fail")
         }
     }
     const speak = () => {
@@ -36,12 +35,12 @@ function TextInput(props) {
           else
           {
               message.text = "Please enter some text first"
-              props.showAlert("Fail: Please enter some text first", "fail")
+              props.newAlert("Fail: Please enter some text first", "fail")
               window.speechSynthesis.speak(message);
           }
         }
         catch(e){
-          props.showAlert("Fail: Some error occurred", "fail")
+          props.newAlert("Fail: Some error occurred", "fail")
           console.error(e)
         }
     }
@@ -52,7 +51,7 @@ function TextInput(props) {
             navigator.clipboard.writeText(text);
         }
         else{
-            props.showAlert("Fail: Please enter some text first", "fail");
+            props.newAlert("Fail: Please enter some text first", "fail");
         }
     }
 
@@ -74,7 +73,7 @@ function TextInput(props) {
     }
   return (
     <>
-      <section style={{height: "90vh"}} className="bg-gradient text-gray-400 body-font">
+      <div style={{height: "850px"}} className="bg-gradient text-gray-400 body-font">
         <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
           <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
@@ -114,7 +113,7 @@ function TextInput(props) {
             />
           </div>
         </div>
-      </section>
+      </div>
     </>
   );
 }

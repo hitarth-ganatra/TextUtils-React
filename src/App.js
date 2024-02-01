@@ -1,17 +1,21 @@
 import './App.css';
-import Navbar from './components/Navbar';
-import TextInput from './components/TextInput';
-import React, { useState } from 'react';
-import Alert from './components/alert';
-import Footer from './components/footer';
-import ActionMenu from './components/actionMenu';
-import About from './components/About';
+import {
+  Navbar,
+  TextInput,
+  About,
+  Tools,
+  ActionMenu,
+  Alert,
+  Footer,
+  Login
+} from './components/index'
+import  React, {useState} from 'react';
 import {Route, Routes} from 'react-router-dom';
 
 function App() {
   const [alert, setAlert] = useState(null);
 
-  const showAlert = (message, type) => {
+  let showAlert = (message, type) => {
     setAlert({
       msg: message,
       type: type
@@ -26,8 +30,9 @@ function App() {
       <Alert alert={alert}/>
       <ActionMenu />
       <Routes>
-        <Route path='/TextUtils-React' element={<TextInput showAlert={showAlert} />}></Route>
+        <Route path='/TextUtils-React' element={<TextInput newAlert={showAlert} />}></Route>
         <Route path='/about' element={<About />}></Route>
+        <Route path='/login/:title' element={<Login newAlert={showAlert}/>}></Route>
       </Routes>
       <Footer/>
     </>

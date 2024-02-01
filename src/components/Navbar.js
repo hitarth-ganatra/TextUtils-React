@@ -23,13 +23,8 @@ function Navbar() {
             <span className="ml-3 text-xl">TextUtils</span>
           </a>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-white" href="#">
-              Home
-            </a>
+            <Link className="mr-5 hover:text-white" to="/TextUtils-React">Home</Link>
             <Link className="mr-5 hover:text-white" to="/about">About</Link>
-            <a className="mr-5 hover:text-white" href="#">
-              Tools
-            </a>
             <button
               id="dropdownHoverButton"
               data-dropdown-toggle="dropdownHover"
@@ -89,7 +84,7 @@ function Navbar() {
               </ul>
             </div>
           </nav>
-          <button className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
+          <Link to="/login/:login" className="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">
             Register / Login
             <svg
               fill="none"
@@ -102,7 +97,7 @@ function Navbar() {
             >
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </button>
+          </Link>
         </div>
       </header>
     </>
