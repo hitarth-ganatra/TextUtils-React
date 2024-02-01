@@ -23,7 +23,7 @@ function Navbar() {
             <span className="ml-3 text-xl">TextUtils</span>
           </a>
           <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <Link className="mr-5 hover:text-white" to="/TextUtils-React">Home</Link>
+            <Link className="mr-5 hover:text-white" to="/">Home</Link>
             <Link className="mr-5 hover:text-white" to="/about">About</Link>
             <button
               id="dropdownHoverButton"
