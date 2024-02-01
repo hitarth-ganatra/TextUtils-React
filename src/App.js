@@ -30,7 +30,7 @@ function App() {
       <Alert alert={alert}/>
       <ActionMenu />
       <Routes>
-        <Route path='/TextUtils-React' element={<TextInput newAlert={showAlert} />}></Route>
+        <Route path='/' element={<TextInput newAlert={showAlert} />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/login/:title' element={<Login newAlert={showAlert}/>}></Route>
       </Routes>
