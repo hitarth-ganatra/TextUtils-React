@@ -37,8 +37,17 @@ function Login(props) {
                     onSubmit={(event) => {
                       event.preventDefault();
                       props.newAlert(`Success: ${newTitle} successfull`, "success")
+                      document.getElementById('email').value = '';
+                      document.getElementById('pwd').value = '';
+
                     }}
-                    onError={() => {props.newAlert(`Fail: ${newTitle} unsuccessfull`, "fail")}}
+                    onError={(event) => {
+                      event.preventDefault();
+                      props.newAlert(`Fail: ${newTitle} unsuccessfull`, "fail")
+                      document.getElementById('email').value = '';
+                      document.getElementById('pwd').value = '';
+
+                    }}
                     >
                         <div className="inputBox">
                             <input type="email" name='email' id="email" placeholder="Email" autoComplete='true' required/>
