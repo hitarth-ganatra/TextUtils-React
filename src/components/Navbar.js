@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from'react-router-dom'; 
+// import About from './components/About';
 
 function Navbar() {
   return (
@@ -24,9 +26,7 @@ function Navbar() {
             <a className="mr-5 hover:text-white" href="#">
               Home
             </a>
-            <a className="mr-5 hover:text-white" href="#">
-              About
-            </a>
+            <Link className="mr-5 hover:text-white" to="/about">About</Link>
             <a className="mr-5 hover:text-white" href="#">
               Tools
             </a>
