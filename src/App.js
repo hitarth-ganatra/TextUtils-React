@@ -26,7 +26,7 @@ function App() {
       <Alert alert={alert}/>
       <ActionMenu />
       <Routes>
-        <Route path='/' element={<TextInput showAlert={showAlert} />}></Route>
+        <Route path='/TextUtils-React' element={<TextInput showAlert={showAlert} />}></Route>
         <Route path='/about' element={<About />}></Route>
       </Routes>
       <Footer/>
